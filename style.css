@@ -1,8 +1,18 @@
 :root{
     --navy: #172444;
-    --coral: #c8362e;
-    --cream: #f7f5f2;
+    --coral: #c8362e;  
     --grey: #5b6475;
+    --page:#f7f5f2;
+    --surface:white;
+    --text:#1f2a44;
+}
+
+/* Dark mode */
+body.dark{
+    --page: #131a2b;
+    --surface:#1f2a44;
+    --text:#f7f5f2;
+    --grey:#b5bdcb;
 }
 
 *{
@@ -13,8 +23,8 @@ body{
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--cream);
-    color: var(--navy);
+    background-color: var(--page);
+    color: var(--text);
     line-height: 1.6;
 }
 h1,h2,h3 .logo{
@@ -29,13 +39,13 @@ h1,h2,h3 .logo{
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: white;
+    background: var(--surface);
 }
 
 .logo{
      font-size: 28px;
      font-weight: 700;
-     color: var(--navy);
+     color: var(--text);
      text-decoration: none;
 }
 
@@ -45,7 +55,7 @@ h1,h2,h3 .logo{
 
 nav a{
     margin-left: 28px;
-    color: var(--navy);
+    color: var(--text);
     text-decoration: none;
     font-weight: 600;
 }
@@ -133,7 +143,8 @@ h2{
 
 /* about */
 .about{
-    background: white;
+    background: var(--surface);
+    color: var(--text);
 }
 
 .about p{
@@ -151,7 +162,7 @@ h2{
 .skills li{
     padding: 8px 18px;
     border-radius: 20px;
-    background: var(--cream);
+    background: var(--page);
     font-weight: 600;
 
 }
@@ -161,14 +172,16 @@ h2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    
 }
 
 .card{
     max-width: 360px;
     margin-bottom: 24px;
-    background: white;
+    background: var(--surface);
     border-radius: 14px;
     overflow: hidden;
+    color: var(--text);
     box-shadow: 0 6px 20px rgb(31, 42, 68, 0.08);
 }
 
@@ -216,6 +229,22 @@ h2{
 .contact-form .btn{
     align-self: flex-start;
     margin-top: 20px;
+}
+
+/* form messages */
+.contact-form .error{
+    margin: 4px 0 0;
+    color: #ffb4ae;
+    font-size: 14px;
+}
+
+.thanks{
+    margin: 20px 0 0;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background: rgb(88, 237, 133);
+    color: var(--navy);
+    font-weight: 600;
 }
 
 /* footer */
